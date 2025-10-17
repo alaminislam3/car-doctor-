@@ -15,9 +15,9 @@ export default async function ServicesSection() {
             className="col-span-12 md:col-span-6 lg:col-span-4 p-4 h-full border"
             key={item._id}
           >
-            <figure className="w-full h-3/4 flex justify-center items-center">
+            <figure className="h-3/4 flex justify-center items-center">
               <Image
-                className="w-full h-full object-fit"
+                className="object-fit"
                 src={item.img}
                 width={314}
                 height={108}

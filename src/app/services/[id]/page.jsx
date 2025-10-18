@@ -6,12 +6,12 @@ export default async function ServiceDetailsPage({ params }) {
   const p =  await params;
   const res = await fetch(`http://localhost:3000/api/service/${p.id}`);
   const data = await res.json();
-  
+  // console.log(data);
   return (
     <div className="container mx-auto">
       <section className="flex justify-center">
         <figure className="relative">
-          <Image src={data?.img} width={500} height={300} alt="banner" />
+          <Image src={data?.img} width={1100} height={300} alt="banner" />
           <div className="transparent-layer overlay-bg absolute border-2 border-red-400 top-0">
             <div className=" font-bold text-2xl flex items-center ps-16">
               <div>
@@ -35,9 +35,9 @@ export default async function ServiceDetailsPage({ params }) {
           <p className="text-justify">{data?.description}</p>
         </div>
         {/* Right Side */}
-        <div className="col-span-3 space-y-4">
-          <Link href={`/checkout/${data.id}`}>
-            <button className="text-white h-9 bg-orange-500">
+        <div className="flex flex-col space-y-4">
+          <Link href={`/checkout/${data._id}`}>
+            <button type="btn" className="text-white px-2 py-2 bg-orange-500">
               Checkout
             </button>
           </Link>

@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="container flex justify-between h-10 mx-auto">
         <ul className="items-stretch hidden space-x-3 lg:flex">
           <Link href={'/'}>
-          <h2 className="font-bold text-2xl">Car-Doctor</h2>
+          <h2 className="font-bold text-2xl">AutoSpark</h2>
           </Link>
           {/* input link here  */}
         </ul>
@@ -37,7 +37,7 @@ export default function Navbar() {
           </div>
           <button
             type="button"
-            className="hidden px-6 py-2 font-semibold rounded lg:block dark:bg-violet-600 dark:text-gray-50"
+            className="hidden px-6 py-2 font-semibold rounded lg:block dark:bg-teal-700 dark:text-gray-50"
           >
             Appoinment
           </button>

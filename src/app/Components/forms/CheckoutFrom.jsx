@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const CheckoutForm = ({ data }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,13 +22,13 @@ const CheckoutForm = ({ data }) => {
       date,
       phone,
       address,
-      service_id: data._id,
-      service_name: data.title,
-      service_img: data.img,
-      service_price: data.price,
+      // service_id: data._id,
+      // service_name: data.title,
+      // service_img: data.img,
+      // service_price: data.price,
     };
 
-    console.log(bookingPayload);
+    // console.log(bookingPayload);
 
     try {
       const res = await fetch("http://localhost:3000/api/service", {
@@ -38,8 +39,14 @@ const CheckoutForm = ({ data }) => {
         body: JSON.stringify(bookingPayload),
       });
       const postedResponse = await res.json();
-      console.log("POSTED DATA", postedResponse);
-      alert("Booking submitted successfully!");
+      // console.log("POSTED DATA", postedResponse);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your Booking completed.Thanks !",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     } catch (error) {
       console.error("Error submitting booking:", error);
       alert("Failed to submit booking. Please try again.");
@@ -138,9 +145,9 @@ const CheckoutForm = ({ data }) => {
             <button
               className="btn btn-primary w-full bg-gray-50  border-2 py-2 px-2"
               type="submit"
-              disabled={isSubmitting}
+              // disabled={isSubmitting}
             >
-              {isSubmitting ? "Submitting..." : "Order Confirm"}
+              submit
             </button>
           </div>
         </form>

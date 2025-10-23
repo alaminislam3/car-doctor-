@@ -39,7 +39,7 @@ export const Hero = () => {
             At <span className="font-semibold text-teal-700">AutoSpark Wash</span>, 
             we use eco-friendly products and advanced cleaning techniques to 
             give your car a spotless, showroom-ready look. From exterior 
-            polishing to interior deep cleaning — we’ve got you covered!
+            polishing to interior deep cleaning we’ve got you covered!
           </p>
 
           <div className="flex items-center">
@@ -50,10 +50,10 @@ export const Hero = () => {
               Book a Wash
             </button>
             <a
-              href="/services"
+              href="/booking"
               className="inline-flex items-center font-semibold text-teal-700 transition-colors duration-200 hover:text-teal-900"
             >
-              View Services
+              View Booking
               <svg
                 className="inline-block w-3 ml-2"
                 fill="currentColor"
